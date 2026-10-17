@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aura Skincare | Aria AI Voice Support</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/auth.css?v=3">
+  <link rel="stylesheet" href="/static/support-layout.css?v=3">
+</head>
+<body data-page="home">
+  <header class="topbar">
+    <a class="brand-mark" href="/" aria-label="Aura Skincare home">a</a>
+    <div><div class="brand-name">aura <span>skincare</span></div><div class="brand-sub">AI CUSTOMER EXPERIENCE</div></div>
+    <nav class="site-links" aria-label="Main navigation">
+      <a href="/voice">Voice support</a><a href="/orders">Sample orders</a><a href="/policies">Our policies</a>
+    </nav>
+    <a id="loginLink" class="header-login" href="/login?next=/">Login</a>
+    <div id="accountSlot" class="account-slot hidden"><span data-user-name></span><button type="button" data-logout>Sign out</button></div>
+  </header>
+
+  <section class="brand-hero" aria-labelledby="brandHeadline">
+    <div class="brand-hero-copy">
+      <div class="eyebrow"><span class="green-dot"></span> THOUGHTFUL CARE, MADE SIMPLE</div>
+      <h1 id="brandHeadline">Everyday care,<br><em>the Aura way.</em></h1>
+      <p>Discover feel-good skincare essentials made for simple routines, mindful moments, and the care your skin deserves.</p>
+      <div class="brand-hero-actions">
+        <a class="brand-button" href="/orders">Explore your order <span>↗</span></a>
+        <a class="brand-text-link" href="#aura-essentials">Discover Aura essentials <span>↓</span></a>
+      </div>
+      <div class="brand-hero-note"><span>✦</span> Simple routines. Thoughtful support. A little more glow every day.</div>
+    </div>
+    <div class="brand-hero-art" aria-label="Aura Skincare product collection">
+      <div class="brand-art-glow"></div>
+      <div class="brand-art-caption">A LITTLE RITUAL, JUST FOR YOU</div>
+      <img class="brand-product-image brand-product-serum" src="/static/products/vitamin-c-serum.svg" alt="Aura Vitamin C Serum">
+      <img class="brand-product-image brand-product-sunscreen" src="/static/products/hydrating-sunscreen.svg" alt="Aura Hydrating Sunscreen SPF 50">
+      <img class="brand-product-image brand-product-greentea" src="/static/products/green-tea-set.svg" alt="Aura Green Tea Face Wash and Toner set">
+      <div class="brand-art-stamp"><span>✦</span><small>YOUR SKINCARE<br>RITUAL STARTS HERE</small></div>
+    </div>
+  </section>
+
+  <section class="routine-film" aria-labelledby="routineFilmHeading">
+    <div class="routine-film-copy">
+      <div class="eyebrow"><span class="green-dot"></span> YOUR AURA RITUAL · 3 SIMPLE STEPS</div>
+      <h2 id="routineFilmHeading">A little care,<br><em>in the right order.</em></h2>
+      <p>See how the three Aura essentials come together in a simple daily routine.</p>
+      <button id="routineFilmToggle" class="routine-film-toggle" type="button" aria-pressed="true" aria-label="Pause product showcase">
+        <span class="routine-film-toggle-icon" aria-hidden="true">Ⅱ</span>
+        <span class="routine-film-toggle-label">Pause showcase</span>
+      </button>
+      <p class="routine-film-caption">A gentle reminder: follow each product’s own directions and your skin’s needs.</p>
+    </div>
+    <div class="routine-film-stage" aria-label="Animated Aura product routine showcase">
+      <div class="routine-film-glow"></div>
+      <div class="routine-film-watermark">AURA · DAILY RITUAL</div>
+      <article class="routine-film-scene routine-film-scene-cleanse">
+        <div class="routine-film-product">
+          <img src="/static/products/green-tea-set.svg" alt="" loading="lazy">
+          <span>01</span>
+        </div>
+        <div class="routine-film-step">
+          <span class="routine-film-kicker">CLEANSE + TONE</span>
+          <h3>Start with a fresh canvas.</h3>
+          <p>Use the Green Tea Face Wash on damp skin and rinse. Follow with toner.</p>
+        </div>
+      </article>
+      <article class="routine-film-scene routine-film-scene-treat">
+        <div class="routine-film-product">
+          <img src="/static/products/vitamin-c-serum.svg" alt="" loading="lazy">
+          <span>02</span>
+        </div>
+        <div class="routine-film-step">
+          <span class="routine-film-kicker">TREAT</span>
+          <h3>Keep your routine thoughtful.</h3>
+          <p>Apply a few drops of Vitamin C Serum to clean, dry skin, then moisturize.</p>
+        </div>
+      </article>
+      <article class="routine-film-scene routine-film-scene-protect">
+        <div class="routine-film-product">
+          <img src="/static/products/hydrating-sunscreen.svg" alt="" loading="lazy">
+          <span>03</span>
+        </div>
+        <div class="routine-film-step">
+          <span class="routine-film-kicker">PROTECT</span>
+          <h3>Finish your daytime ritual.</h3>
+          <p>Apply SPF 50 before sun exposure. Reapply as needed during the day.</p>
+        </div>
+      </article>
+      <div class="routine-film-progress" aria-hidden="true"><span></span></div>
+      <div class="routine-film-footer"><span>01 — 03</span><span>THOUGHTFUL CARE, MADE SIMPLE</span></div>
+    </div>
+  </section>
+
+  <section id="aura-essentials" class="brand-essentials" aria-labelledby="essentialsHeading">
+    <div class="brand-section-heading">
+      <div class="eyebrow">MEET YOUR EVERYDAY ESSENTIALS</div>
+      <h2 id="essentialsHeading">A thoughtful routine,<br><em>one step at a time.</em></h2>
+      <p>Explore Aura skincare essentials and choose a thoughtful addition to your daily routine.</p>
+    </div>
+    <div class="brand-product-grid">
+      <article class="brand-product-card">
+        <div class="brand-product-visual"><img src="/static/products/vitamin-c-serum.svg" alt="Vitamin C Serum bottle illustration" loading="lazy"></div>
+        <div class="brand-product-card-copy"><span class="brand-product-step">01 · GLOW</span><h3>Vitamin C Serum</h3><p>A lightweight daily serum for a simple, bright-feeling skincare routine.</p><h2 class="brand-product-price">₹699</h2><a class="brand-book-link" href="/book?product=ORD-101">Book the Order <span>↗</span></a></div>
+      </article>
+      <article class="brand-product-card">
+        <div class="brand-product-visual"><img src="/static/products/hydrating-sunscreen.svg" alt="Hydrating Sunscreen SPF 50 tube illustration" loading="lazy"></div>
+        <div class="brand-product-card-copy"><span class="brand-product-step">02 · PROTECT</span><h3>Hydrating Sunscreen SPF 50</h3><p>A daily-use SPF 50 sunscreen with a hydrating feel.</p><h2 class="brand-product-price">₹499</h2><a class="brand-book-link" href="/book?product=ORD-102">Book the Order <span>↗</span></a></div>
+      </article>
+      <article class="brand-product-card">
+        <div class="brand-product-visual"><img src="/static/products/green-tea-set.svg" alt="Green Tea Face Wash and Toner set illustration" loading="lazy"></div>
+        <div class="brand-product-card-copy"><span class="brand-product-step">03 · REFRESH</span><h3>Green Tea Face Wash + Toner</h3><p>A two-step routine set with a green tea face wash and a balancing toner.</p><h2 class="brand-product-price">₹850</h2><a class="brand-book-link" href="/book?product=ORD-103">Book the Order <span>↗</span></a></div>
+      </article>
+    </div>
+    <div class="brand-promise">
+      <span class="brand-promise-icon">✦</span>
+      <div><strong>Care that feels personal.</strong><p>Need a hand with a product or delivery? Aria can help with your Aura order and care policies.</p></div>
+      <a href="/voice">Meet Aria <span>↗</span></a>
+    </div>
+  </section>
+    <footer class="site-footer" aria-label="Site footer"> <center><p>&copy; 2023 Aura Skincare. All rights reserved. content number:8790654783</p></center></footer>    
+</body>
+</html>

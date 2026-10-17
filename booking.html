@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f0">
+  <title>Book your Aura order</title>
+  <link rel="stylesheet" href="/static/site.css?v=35">
+</head>
+<body data-page="booking">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Aura Skincare home"><span class="brand-symbol">a</span><span>aura <i>skincare</i><small>THOUGHTFUL CARE, MADE SIMPLE</small></span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/voice">Voice support</a><a href="/orders">Sample orders</a><a href="/policies">Our policies</a></nav>
+    <div class="header-actions"><a class="header-cta" href="/">Back to home</a></div>
+  </header>
+  <main class="page-wrap checkout-wrap">
+    <div class="page-heading">
+      <div><div class="eyebrow">AURA SKINCARE · SAMPLE CHECKOUT</div><h1>Make it <em>yours.</em></h1><p>Enter one of the three sample customer names and your delivery details. Your order number will match that customer.</p></div>
+      <div class="mode-pill"><i></i> Demo booking · no real charge</div>
+    </div>
+    <div class="checkout-grid">
+      <section class="checkout-card">
+        <div class="checkout-step"><span>01</span><div><strong>Your delivery details</strong><small>Order number is assigned to your sample customer name.</small></div></div>
+        <div id="bookingProduct" class="checkout-product"><p class="loading">Loading product details…</p></div>
+        <form id="bookingForm" class="checkout-form">
+          <label for="bookingName">Full name</label>
+          <input id="bookingName" name="customer_name" autocomplete="name" list="sampleCustomers" required maxlength="100" placeholder="Priya Sharma, Rahul Verma, or Ananya Patel">
+          <datalist id="sampleCustomers"><option value="Priya Sharma"><option value="Rahul Verma"><option value="Ananya Patel"></datalist>
+          <p id="sampleCustomerMatch" class="checkout-privacy" aria-live="polite"></p>
+          <label for="bookingPhone">Mobile number</label>
+          <input id="bookingPhone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" required minlength="10" maxlength="10" pattern="[0-9]{10}" placeholder="10-digit mobile number" title="Enter exactly 10 digits">
+          <label for="bookingAddress">Delivery address</label>
+          <textarea id="bookingAddress" name="address" autocomplete="street-address" required minlength="10" maxlength="400" rows="3" placeholder="House / street, area, city, state, PIN code"></textarea>
+          <p class="checkout-privacy">Details are kept in this demo’s memory for the active order and are cleared when the backend restarts. Do not enter payment credentials here.</p>
+          <p id="bookingError" class="form-error hidden" role="alert"></p>
+          <button id="continuePayment" class="button button-dark checkout-submit" type="submit">Continue to payment <span>↗</span></button>
+        </form>
+      </section>
+      <aside class="checkout-aside">
+        <div class="checkout-step"><span>02</span><div><strong>Delivery estimate</strong><small>From the Aura sample policy</small></div></div>
+        <p class="checkout-delivery">Standard delivery takes <strong>3–5 business days</strong> after booking. Courier tracking appears after dispatch.</p>
+        <div class="checkout-demo-note"><strong>Demo checkout</strong><p>This sample flow updates one of the three existing sample orders only after you confirm. No real payment is processed.</p></div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer"><span>© Aura Skincare · Demo experience</span><span>No real orders or payments are processed</span></footer>
+  <script src="/static/site.js?v=37"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Aura Dashboard | Aura Skincare</title><link rel="stylesheet" href="/static/site.css">
+</head>
+<body data-page="orders">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Aura Skincare home"><span class="brand-symbol">a</span><span>aura <i>skincare</i><small>THOUGHTFUL CARE, MADE SIMPLE</small></span></a>
+    <a class="customer-home-link" href="/">Home</a>
+    <div class="header-actions"><span class="account-name" data-user-name></span><button class="logout-button" data-logout>Sign out</button></div>
+  </header>
+  <main class="page-wrap">
+    <div class="page-heading"><div><div class="eyebrow">YOUR PRIVATE AURA ACCOUNT</div><h1>Your dashboard, <em><span id="dashboardCustomer">loading…</span>.</em></h1><p>Only the order linked to your sign-in is shown here.</p></div><div class="mode-pill"><i></i> Your account</div></div>
+    <p id="customerDashboardMessage" class="error-note hidden" role="alert"></p>
+    <div class="customer-dashboard">
+      <aside class="customer-sidebar" aria-label="Your account">
+        <div class="eyebrow">MY ACCOUNT</div>
+        <button class="active" type="button" data-dashboard-tab="details" aria-current="page">Order details</button>
+        <button type="button" data-dashboard-tab="actions" aria-current="false">Damage or cancel</button>
+      </aside>
+      <div class="customer-dashboard-content">
+        <section id="customerDetailsPanel" class="customer-panel">
+          <div class="section-heading"><div><div class="eyebrow">YOUR ORDER</div><h2>Product and delivery details</h2></div></div>
+          <div id="customerOrder" class="orders-grid"><div class="loading">Loading your order…</div></div>
+        </section>
+        <section id="customerActionsPanel" class="customer-panel" hidden>
+          <div class="section-heading"><div><div class="eyebrow">ORDER SUPPORT</div><h2>Damage or cancellation</h2></div></div>
+          <div id="customerOrderActions"><p class="loading">Loading your order options…</p></div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"><span>© Aura Skincare · Demo experience</span><span>Your dashboard shows only the order assigned to your account.</span></footer>
+  <script src="/static/site.js?v=37"></script>
+</body>
+</html>

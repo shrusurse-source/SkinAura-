@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talk to Aria | Aura Skincare</title><link rel="stylesheet" href="/static/site.css"><link rel="stylesheet" href="/static/support-layout.css?v=3">
+</head>
+<body data-page="voice">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Aura Skincare home"><span class="brand-symbol">a</span><span>aura <i>skincare</i><small>THOUGHTFUL CARE, MADE SIMPLE</small></span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Main navigation"><a href="/">Home</a><a class="active" href="/voice">Voice support</a><a href="/orders">Sample orders</a><a href="/policies">Our policies</a></nav>
+    <div class="header-actions"><span class="account-name hidden" data-user-name></span><button class="logout-button hidden" data-logout>Sign out</button><a class="header-cta" href="/policies">View policies <span>↗</span></a></div>
+  </header>
+  <main class="page-wrap">
+    <div class="page-heading"><div><div class="eyebrow">YOUR AURA SKINCARE SUPPORT ASSISTANT</div><h1>Let’s talk it <em>through.</em></h1><p>Ask Aria about Aura products, shipping, returns, or Cash on Delivery. Sign in for private, personalized order tracking and cancellation help.</p></div><div class="mode-pill" id="modePill"><i></i> Checking support…</div></div>
+    <div class="voice-layout">
+      <section class="voice-main">
+        <div class="voice-card">
+          <div class="voice-top"><div class="avatar">✦</div><div class="agent-meta"><h2>Aria</h2><p>Friendly, professional support · India</p></div><div id="stateBadge" class="state-badge"><span class="state-dot"></span><span id="stateText">Ready</span></div></div>
+          <div class="orb-wrap"><div id="orb" class="orb"><div class="orb-core">✦</div></div><div id="wave" class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div id="headline" class="voice-headline">Ready when you are</div><p id="subline" class="voice-subline">Start a call and ask your question out loud.</p>
+          <div class="controls"><button id="startBtn" class="button button-dark"><span>●</span> Start Call</button><button id="recordBtn" class="button button-dark hidden" type="button" hidden><span>●</span> Record a question</button><button id="endBtn" class="button button-outline" disabled>End Call</button></div>
+          <div class="privacy-note">No sign-in is needed for product or policy questions. For order-specific support, sign in first. If browser speech recognition is unavailable, you can record a short question; that audio is sent to OpenAI for transcription. Typed input is always available.</div>
+        </div>
+        <section class="transcript-card"><div class="section-heading"><div><div class="eyebrow">LIVE CONVERSATION</div><h2>Call transcript</h2></div><span id="transcriptCount" class="count">0 messages</span></div>
+          <div id="transcript" class="transcript empty"><div class="empty-icon">◌</div><p>Your conversation will appear here.</p></div>
+          <div class="typed-row"><input id="typedInput" type="text" placeholder="Or type a test message here…" autocomplete="off"><button id="sendBtn" class="button button-dark">Send</button></div>
+          <p class="small-hint">Ask about product details, shipping, returns, damaged items, or Cash on Delivery. Order-specific support requires sign-in.</p>
+        </section>
+      </section>
+      <aside class="voice-side">
+        <section class="side-card"><div class="eyebrow">CUSTOMER SUPPORT</div><h2>Personalized order help</h2><p class="side-desc">Aria can help with your linked order and product.</p><div id="voiceOrders" class="compact-orders"><p class="loading">Loading your order…</p></div><a class="text-link" href="/orders">View your order details →</a></section>
+        <section class="side-card"><div class="eyebrow">GOOD TO KNOW</div><h2>Aria can help with</h2><div class="help-list"><span>Order status and tracking</span><span>Returns and damaged items</span><span>Cancellation eligibility</span><span>Shipping and COD policies</span></div><a class="text-link" href="/policies">Read the policies →</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer"><span>© Aura Skincare · Demo experience</span><span>Mock order data · No real orders are changed</span></footer>
+  <script src="/static/site.js?v=37"></script>
+</body>
+</html>

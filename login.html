@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f0">
+  <title>Welcome to Aura | Sign in</title><link rel="stylesheet" href="/static/site.css">
+</head>
+<body data-page="login">
+  <div class="intro-splash login-splash" aria-hidden="true"><div class="splash-mark">a</div><div class="splash-name">aura <i>skincare</i></div><div class="splash-caption">THOUGHTFUL CARE, MADE SIMPLE</div><div class="splash-ring"></div></div>
+  <header class="site-header login-header">
+    <a class="brand" href="/" aria-label="Aura Skincare home"><span class="brand-symbol">a</span><span>aura <i>skincare</i><small>THOUGHTFUL CARE, MADE SIMPLE</small></span></a>
+    <a class="login-home-link" href="/">Home</a>
+  
+  </header>
+  <main class="login-shell">
+    <section id="signin" class="login-card">
+      <div class="eyebrow">AURA SKINCARE</div><h2>Sign in</h2>
+      <div class="login-role-switch" role="group" aria-label="Choose your Aura account">
+        <button class="login-role-option active" type="button" data-role="customer" aria-pressed="true">User Login</button>
+        <button class="login-role-option" type="button" data-role="admin" aria-pressed="false">Admin Login</button>
+      </div>
+      <form id="loginForm">
+        <label id="nameLabel" for="customerName">Your name</label><input id="customerName" name="name" autocomplete="name" required placeholder="For example, Priya Sharma">
+        <div id="captchaRow" class="captcha-row"><div><label for="captchaCode">Enter the CAPTCHA</label><input id="captchaCode" name="captcha_code" autocomplete="off" required maxlength="8" placeholder="Type the code shown"></div><div class="captcha-image-wrap"><img id="captchaImage" alt="CAPTCHA challenge"><button id="refreshCaptcha" class="captcha-refresh" type="button" aria-label="Refresh CAPTCHA">↻</button></div></div>
+        <input id="captchaId" name="captcha_id" type="hidden">
+        <div id="passwordField"><label id="passwordLabel" for="loginPassword">Your password</label><input id="loginPassword" name="password" type="password" autocomplete="current-password" required></div>
+        <div id="customerOrderFields">
+          <label for="orderReference">Order ID</label><input id="orderReference" name="order_reference" autocomplete="off" required placeholder="ORD-101, ORD-102, or ORD-103">
+        </div>
+        <p id="loginError" class="form-error hidden" role="alert"></p>
+        <button id="loginSubmit" class="button button-dark login-submit" type="submit">Continue to your order <span>↗</span></button>
+      </form>
+    </section>
+  </main>
+  <script src="/static/site.js?v=37"></script>
+</body>
+</html>

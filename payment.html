@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f0">
+  <title>Demo payment | Aura Skincare</title>
+  <link rel="stylesheet" href="/static/site.css?v=35">
+</head>
+<body data-page="payment">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Aura Skincare home"><span class="brand-symbol">a</span><span>aura <i>skincare</i><small>THOUGHTFUL CARE, MADE SIMPLE</small></span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/voice">Voice support</a><a href="/orders">Sample orders</a><a href="/policies">Our policies</a></nav>
+    <div class="header-actions"><a class="header-cta" href="/book">Back to details</a></div>
+  </header>
+  <main class="page-wrap checkout-wrap">
+    <div class="page-heading">
+      <div><div class="eyebrow">AURA SKINCARE · SECURE DEMO FLOW</div><h1>Choose how to <em>pay.</em></h1><p>This is a demonstration only. No money will be charged and no card or UPI credentials are collected.</p></div>
+      <div class="mode-pill"><i></i> Dummy payment · no real transaction</div>
+    </div>
+    <div id="paymentContent" class="checkout-grid">
+      <section class="checkout-card">
+        <div class="checkout-step"><span>01</span><div><strong>Confirm your order</strong><small>Order ID and price are matched from the sample data.</small></div></div>
+        <div id="paymentSummary" class="checkout-product"><p class="loading">Loading your checkout…</p></div>
+        <form id="paymentForm" class="checkout-form">
+          <label for="payerName">Customer name for this order</label>
+          <input id="payerName" name="payer_name" autocomplete="name" required maxlength="100">
+          <fieldset class="payment-methods">
+            <legend>Payment method</legend>
+            <button class="payment-choice selected" type="button" data-payment-method="gpay" aria-pressed="true"><span class="payment-choice-icon">G</span><span><strong>Google Pay</strong><small>UPI · demo only</small></span></button>
+            <button class="payment-choice" type="button" data-payment-method="phonepe" aria-pressed="false"><span class="payment-choice-icon phonepe">पे</span><span><strong>PhonePe</strong><small>UPI · demo only</small></span></button>
+            <button class="payment-choice" type="button" data-payment-method="cod" aria-pressed="false"><span class="payment-choice-icon cod">₹</span><span><strong>Cash on Delivery</strong><small>Pay at the doorstep</small></span></button>
+          </fieldset>
+          <p id="paymentMethodNote" class="checkout-privacy">Demo UPI: confirming records a simulated success only. Never enter a card number, UPI PIN, or banking password.</p>
+          <p id="paymentError" class="form-error hidden" role="alert"></p>
+          <button id="placeOrder" class="button button-dark checkout-submit" type="submit">Complete demo payment · ₹—</button>
+        </form>
+      </section>
+      <aside class="checkout-aside">
+        <div class="checkout-step"><span>02</span><div><strong>What happens next</strong><small>After you confirm this demo booking</small></div></div>
+        <p class="checkout-delivery">The sample order is marked <strong>Processing</strong> and shows an estimate of <strong>3–5 business days</strong>. Courier and tracking details are assigned only after dispatch.</p>
+        <div class="checkout-demo-note"><strong>No payment credentials</strong><p>Google Pay and PhonePe are simulated buttons, not live payment integrations. A dummy reference is generated for demo UPI payments.</p></div>
+      </aside>
+    </div>
+    <section id="paymentSuccess" class="checkout-success hidden" aria-live="polite"></section>
+  </main>
+  <footer class="site-footer"><span>© Aura Skincare · Demo experience</span><span>No real orders or payments are processed</span></footer>
+  <script src="/static/site.js?v=37"></script>
+</body>
+</html>
